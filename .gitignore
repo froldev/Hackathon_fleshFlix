@@ -1,2 +1,6 @@
+
+# Default ignored files
+/workspace.xml
 /vendor/
-/config/db.php
+config/db.php
+
