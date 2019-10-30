@@ -2,3 +2,7 @@
 /workspace.xml
 /vendor/
 config/db.php
+.phpcs-cache
+.idea/*
+
+
