@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <section id="all-movies">
+        <h1 id="title-movies">Les meilleurs films :</h1>
+        <div class="row">
+            {% for movie in movies.movies %}
+                <div class="col-3">
+                    <div class="card">
+                        <img src="{{ movie.posterUrl }}" class="card-img-top" alt="{{ movie.title }}">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ movie.title }}</h3>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
