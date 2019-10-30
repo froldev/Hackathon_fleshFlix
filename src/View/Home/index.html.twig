@@ -2,35 +2,23 @@
 
 {% block content %}
 
-{% for question in questions %}
+{% for question, values in questions %}
 
 <form>
 
-    <h2> {{ question }} </h2>
+   <h2>{{ question }}</h2>
+
+    {% for value in values %}
+
         <div class="form-check">
-            <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="{{ question }}">
+            <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="{{  question }}">
             <label class="form-check-label" for="defaultCheck1">
-                La réponse D
+                <a><img src="{{ value }}" width=350px></a>
             </label>
         </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" value="" id="defaultCheck2" name="{{ question }}">
-            <label class="form-check-label" for="defaultCheck2">
-                La réponse D
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="{{ question }}">
-            <label class="form-check-label" for="defaultCheck1">
-                La réponse D
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" value="" id="defaultCheck2" name="{{ question }}">
-            <label class="form-check-label" for="defaultCheck2">
-                La réponse D
-            </label>
-        </div>
+
+    {%  endfor %}
+
 </form>
 
     {%  endfor %}
