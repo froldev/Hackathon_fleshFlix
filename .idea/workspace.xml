@@ -4,7 +4,9 @@
     <list default="true" id="6f0e4123-e53f-47de-a3f0-8aaeee772c70" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,9 +112,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572438229797</updated>
+<<<<<<< HEAD
       <workItem from="1572438230926" duration="14666000" />
       <workItem from="1572463412438" duration="13000" />
       <workItem from="1572463426177" duration="1532000" />
+=======
+      <workItem from="1572438230926" duration="18959000" />
+>>>>>>> ac7a3d9f262bfb8689a20dce1c6bd16736eea4e7
     </task>
     <servers />
   </component>

@@ -5,3 +5,4 @@
 config/db.php
 .phpcs-cache
 /.idea/
+
