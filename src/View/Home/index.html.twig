@@ -1,5 +1,39 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Hello Wilder !</h1>
+
+{% for question in questions %}
+
+<form>
+
+    <h2> {{ question }} </h2>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="{{ question }}">
+            <label class="form-check-label" for="defaultCheck1">
+                La réponse D
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="" id="defaultCheck2" name="{{ question }}">
+            <label class="form-check-label" for="defaultCheck2">
+                La réponse D
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="{{ question }}">
+            <label class="form-check-label" for="defaultCheck1">
+                La réponse D
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="" id="defaultCheck2" name="{{ question }}">
+            <label class="form-check-label" for="defaultCheck2">
+                La réponse D
+            </label>
+        </div>
+</form>
+
+    {%  endfor %}
+
+
 {% endblock %}
