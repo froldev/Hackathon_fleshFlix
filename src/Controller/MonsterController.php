@@ -133,9 +133,9 @@ class MonsterController extends AbstractController
                     sans écouter les avertissements du vieux monsieur qui les a pourtant bien prévenus qu\'il y avait
                     déjà eu un massacre 2 jours plus tôt',
                     'Lettre'=> 'Slasher'
-                ]
-
+                ],
             ],
+
 
             'Sais-tu courir vite, mais genre.. très très vite ?' => [
                 [
@@ -249,5 +249,10 @@ class MonsterController extends AbstractController
     public function final()
     {
         return $this->twig->render('Monster/final.html.twig');
+    }
+
+    public function home()
+    {
+        return $this->twig->render('Monster/home.html.twig');
     }
 }
