@@ -55,7 +55,7 @@ class MonsterController extends AbstractController
                     'Lettre'=>'Zombie'
                 ],
                 [
-                    'Image'=>'https://www.cravate-avenue.com/11215-home_default/lacets-plats-coton-couleur-vert-armee.jpg',
+                    'Image'=>'https://advancingnativemissions.com/wp-content/uploads/2019/10/The-Most-Important-Verses-in-the-Bible-Blog-Featured-Image-850x509.jpg',
                     'Text'=> 'Bible',
                     'Lettre'=>'Ghost'
                 ],

@@ -12,9 +12,9 @@
                 {%  for value in values %}
 
                         <div class="form-check col">
-                            <input class="form-check-input" type="radio" value="{{ value.Lettre }}" id="defaultCheck1" name="{{ question }}">
-                            <label class="form-check-label" for="defaultCheck1">
-                                <a href=""><img class="imageForm zoom" src="{{ value.Image }}"></a>
+                            <input class="form-check-input" type="checkbox" value="{{ value.Lettre }}" name="{{ question }}" id="{{ value.Text }}">
+                            <label class="form-check-label" for="{{ value.Text }}">
+                                <img class="imageForm slide" src="{{ value.Image }}">
                                 <div class="descriptionImage">
                                     <p>{{ value.Text }}</p>
                                 </div>
@@ -24,7 +24,7 @@
             </div>
 
     {%  endfor %}
-        <button type="submit" class="button opacity">Submit</button>
+        <button type="submit" class="button zoom-out">Submit</button>
     </form>
 
 {% endblock %}
