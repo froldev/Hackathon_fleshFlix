@@ -1,23 +1,32 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
 
+
     <h1>Quelle victime es-tu ?</h1>
+    <form method="post" class="question" action="monster/profiles">
+
     {% for question, values in questions %}
-        <form method="post">
+
             <h2>{{ question }}</h2>
-            <div class="row">
+            <div class="row space-around">
+
                 {%  for value in values %}
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="{{ question }}">
+
+                        <div class="form-check col">
+                            <input class="form-check-input" type="radio" value="{{ value.Lettre }}" id="defaultCheck1" name="{{ question }}">
                             <label class="form-check-label" for="defaultCheck1">
-                                <a href=""><img class="imageForm" src="{{ value.Image }}"></a>
-                                <p>{{ value.Text }}</p>
+                                <a href=""><img class="imageForm zoom" src="{{ value.Image }}"></a>
+                                <div class="descriptionImage">
+                                    <p>{{ value.Text }}</p>
+                                </div>
                             </label>
                         </div>
-                    {% endfor %}
+                {% endfor %}
             </div>
-            <button type="submit">Submit</button>
-        </form>
+
     {%  endfor %}
+        <button type="submit" class="button opacity">Submit</button>
+    </form>
+
 {% endblock %}
 
