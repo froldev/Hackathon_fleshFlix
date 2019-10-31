@@ -1,3 +1,36 @@
+/* Main part */
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    width:100%;
+    background: linear-gradient(135deg, black 60%,#C62C00);
+}
+
+h1 {
+    font-family: 'Nosifer', cursive;
+    color: #C60029;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Freckle Face', cursive;
+    color: #C64900;
+    margin: 0 auto;
+}
+
+p {
+    font-family: 'Neucha', cursive;
+    color: #C67E00;
+    font-size: 24px;
+}
+
+/* ---------------------------------------------------- */
+
+/* Form */
 
 .form-check{
     display: flex;
