@@ -20,7 +20,7 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\SyntaxError
      */
 
-/*
+
     public function index()
     {
         $questionsForm = [
@@ -59,7 +59,7 @@ class HomeController extends AbstractController
                     'Lettre'=>'Zombie'
                 ],
                 [
-                    'Image'=>'https://www.cravate-avenue.com/11215-home_default/lacets-plats-coton-couleur-vert-armee.jpg',
+                    'Image'=>'https://advancingnativemissions.com/wp-content/uploads/2019/10/The-Most-Important-Verses-in-the-Bible-Blog-Featured-Image-850x509.jpg',
                     'Text'=> 'Bible',
                     'Lettre'=>'Ghost'
                 ],
@@ -82,7 +82,7 @@ class HomeController extends AbstractController
                     'Lettre'=>'Slasher'
                 ],
                 [
-                    'Image'=> 'https://www.terreur-nocturne.fr/wp-content/uploads/2019/08/la-nuit-des-morts-vivants-george-romero-1968.jpg',
+                    'Image'=> 'https://img.20mn.fr/ejPb-cnARCaBvPUPxGTWBw/310x190_cimetiere-pantin-illustration.jpg',
                     'Text'=> 'Aller fleurir la tombe de son ami mystérieusement emporté par une épidémie fulgurante',
                     'Lettre'=>'Zombie'
                 ],
@@ -200,5 +200,5 @@ class HomeController extends AbstractController
 
         return $this->twig->render("Home/index.html.twig", ["questions" => $questionsForm]);
     }
-      */
+
 }
