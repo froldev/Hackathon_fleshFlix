@@ -19,6 +19,8 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
+
+
     public function index()
     {
         $questionsForm = [
@@ -45,7 +47,7 @@ class HomeController extends AbstractController
                 ]
             ],
 
-            'Quelqu\'un t\'attaque et tu as le droit de choisir un objet pour te défendre. Lequel prends-tu ?' => [
+            'Quel objet choisirais-tu pour te défendre ?' => [
                 [
                     'Image'=>'https://www.eurolam-thiers.com/1113-tm_large_default/couteau-eminceur-20-cm-zen-fischer-bargoin-couteau-chef.jpg',
                     'Text'=> 'Couteau',
@@ -57,7 +59,7 @@ class HomeController extends AbstractController
                     'Lettre'=>'Zombie'
                 ],
                 [
-                    'Image'=>'https://www.cravate-avenue.com/11215-home_default/lacets-plats-coton-couleur-vert-armee.jpg',
+                    'Image'=>'https://advancingnativemissions.com/wp-content/uploads/2019/10/The-Most-Important-Verses-in-the-Bible-Blog-Featured-Image-850x509.jpg',
                     'Text'=> 'Bible',
                     'Lettre'=>'Ghost'
                 ],
@@ -80,7 +82,7 @@ class HomeController extends AbstractController
                     'Lettre'=>'Slasher'
                 ],
                 [
-                    'Image'=> 'https://www.terreur-nocturne.fr/wp-content/uploads/2019/08/la-nuit-des-morts-vivants-george-romero-1968.jpg',
+                    'Image'=> 'https://img.20mn.fr/ejPb-cnARCaBvPUPxGTWBw/310x190_cimetiere-pantin-illustration.jpg',
                     'Text'=> 'Aller fleurir la tombe de son ami mystérieusement emporté par une épidémie fulgurante',
                     'Lettre'=>'Zombie'
                 ],
@@ -90,7 +92,7 @@ class HomeController extends AbstractController
                     'Lettre'=>'Secret'
                 ]
             ],
-            'Quel est le premier endroit auquel tu penses pour vous cacher ?' => [
+            'Quel est le premier endroit auquel tu penses pour te cacher ?' => [
                 [
                     'Image'=>'https://img.ohmymag.com/article/insolite/une-femme-ecrit-une-lettre-de-rupture-et-va-se-cacher-sous-son-lit-pour-voir-la-reaction-de-son-copain_89e48fa3c9ae8a884b5a6adfcaf17b8c781550e9.jpg',
                     'Text'=> ' Sous le lit de ma soeur de 6 ans',
@@ -198,4 +200,5 @@ class HomeController extends AbstractController
 
         return $this->twig->render("Home/index.html.twig", ["questions" => $questionsForm]);
     }
+
 }

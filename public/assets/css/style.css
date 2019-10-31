@@ -19,6 +19,7 @@ h1 {
     color: #C60029;
     margin: 0 auto;
     padding: 20px;
+    text-align:center;
 }
 
 h2 {
@@ -27,6 +28,7 @@ h2 {
     margin: 0 auto;
     padding: 40px 10px;
     font-size: 40px;
+    text-align:center;
 }
 
 p {
@@ -51,6 +53,10 @@ a, a:hover {
     flex-direction: column;
 }
 
+.form-check-label {
+    margin-right: auto;
+}
+
 .checkbox{
     height: 20px;
     width: 20px;
@@ -59,11 +65,11 @@ a, a:hover {
 .imageForm{
     object-fit: cover;
     object-position: top;
-    width : 350px;
+    width : 300px;
     height: 300px;
 }
 
-p{
+p {
     width: 350px;
 }
 
@@ -133,22 +139,34 @@ p{
     box-shadow:3px 3px 12px #999;
     background:#C67E00;
     font-family: 'Nosifer', cursive;
-    font-size: 22px;
+    font-size: 32px;
     color:#555;
+}
+
+.zoom-out {
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.zoom-out:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.slide {
+    margin-left: 0px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.slide:hover {
+    margin-left: 30px;
 }
 
 .opacity:hover {
     opacity: 0.5;
 }
-
-.zoom img {
-
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-}
-
 
 #profil .card:hover{
     -webkit-transform: scale(1.3);
@@ -241,6 +259,7 @@ section{
     margin-bottom:40px;
 }
 
+
 .zoom:hover img {
     -webkit-transform: scale(1.3);
     transform: scale(1.3);
@@ -277,3 +296,6 @@ section{
     padding-right:0px;
 }
 
+.radio-button{
+    opacity:0.3;
+}
