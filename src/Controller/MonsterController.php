@@ -12,7 +12,7 @@ class MonsterController extends AbstractController
     {
         $moviesApi = new ApiMoviesManager();
         $movies = $moviesApi->getMovies();
-        return $this->twig->render('Monster/movies.html.twig', [
+        return $this->twig->render('monster/movies.html.twig', [
             "movies" => $movies,
         ]);
     }
@@ -192,15 +192,48 @@ class MonsterController extends AbstractController
             ],
         ];
 
-        return $this->twig->render("Monster/index.html.twig", ["questions" => $questionsForm]);
+        return $this->twig->render("monster/index.html.twig", ["questions" => $questionsForm]);
     }
 
-    public function profils(string $profil)
+    public function profils()
     {
-        $moviesApi = new ApiMoviesManager();
-        $movies = $moviesApi->getProfil($profil);
-        return $this->twig->render('Monster/fight.html.twig', [
-            "movies" => $movies,
-        ]);
+        if ($_SERVER['REQUEST_METHOD']==='POST') {
+
+            $letters = $_POST;
+
+            $zombie =  0;
+            $ghost =  0;
+            $slasher =  0;
+            $secret =  0;
+
+            foreach ($letters as $letter){
+                if ($letter == 'Zombie'){
+                    $zombie++;
+                }
+                if ($letter == 'Ghost'){
+                    $ghost++;
+                }
+                if ($letter == 'Slasher'){
+                    $slasher++;
+                }
+                if ($letter == 'Secret'){
+                    $secret++;
+                }
+            }
+            if ($slasher >= $zombie and $slasher >= $ghost and $slasher >= $secret){
+                return $this->twig->render('monster/profils/slasher.html.twig');
+            }
+            if ($zombie >= $slasher and $zombie >= $ghost and $zombie >= $secret){
+                return $this->twig->render('monster/profils/zombie.html.twig');
+            }
+            if ($ghost >= $zombie and $ghost >= $secret and $ghost >= $slasher){
+                return $this->twig->render('monster/profils/ghost.html.twig');
+            }
+            if ($secret >= $zombie and $secret >= $ghost and $secret >= $slasher){
+                return $this->twig->render('monster/profils/secret.html.twig');
+            }
+        }
+
+        return $this->twig->render('monster/index.html.twig');
     }
 }

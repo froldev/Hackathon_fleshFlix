@@ -1,20 +1,14 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
 
-<<<<<<< HEAD:src/View/Monster/index.html.twig
     <h1>Quel victime es-tu ?</h1>
-        <form method="get" action="monster/profils">
+        <form method="post" action="monster/profils">
             {% for question, values in questions %}
-=======
-    <h1>Quelle victime es-tu ?</h1>
-    {% for question, values in questions %}
-        <form method="post">
->>>>>>> 25236f9773ba4d377630b0a77a2b246ab4b69870:src/View/Home/index.html.twig
             <h2>{{ question }}</h2>
             <div class="row">
                 {%  for value in values %}
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="{{ question }} {{ value.Lettre }}">
+                            <input class="checkbox" type="radio" value="{{ value.Lettre }}" id="defaultCheck1" name="{{ question }}">
                             <label class="form-check-label" for="defaultCheck1">
                                 <a href=""><img class="imageForm" src="{{ value.Image }}"></a>
                                 <div class="descriptionImage">
