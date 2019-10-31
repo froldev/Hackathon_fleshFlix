@@ -1,9 +1,15 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
 
+<<<<<<< HEAD:src/View/Monster/index.html.twig
     <h1>Quel victime es-tu ?</h1>
         <form method="get" action="monster/profils">
             {% for question, values in questions %}
+=======
+    <h1>Quelle victime es-tu ?</h1>
+    {% for question, values in questions %}
+        <form method="post">
+>>>>>>> 25236f9773ba4d377630b0a77a2b246ab4b69870:src/View/Home/index.html.twig
             <h2>{{ question }}</h2>
             <div class="row">
                 {%  for value in values %}
