@@ -195,5 +195,12 @@ class MonsterController extends AbstractController
         return $this->twig->render("Monster/index.html.twig", ["questions" => $questionsForm]);
     }
 
-
+    public function profils(string $profil)
+    {
+        $moviesApi = new ApiMoviesManager();
+        $movies = $moviesApi->getProfil($profil);
+        return $this->twig->render('Monster/fight.html.twig', [
+            "movies" => $movies,
+        ]);
+    }
 }
