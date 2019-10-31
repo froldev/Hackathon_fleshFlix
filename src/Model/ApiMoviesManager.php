@@ -22,7 +22,7 @@ class ApiMoviesManager
                 return $movies = [
                     ["title" => "The Ring",
                         "url" => "https://image.tmdb.org/t/p/w600_and_h900_bestv2/zHJFdhqEXZJxG653oZvOM3PmNON.jpg",
-                        "profil" => "",
+                        "profil" => "La possession n'attend que toi",
                         ],
                     ["title" => "Annabelle",
                         "url" => "https://image.tmdb.org/t/p/w600_and_h900_bestv2/yAgxM61Sn0dYML4C9v3MJFp5zPI.jpg",
@@ -43,7 +43,7 @@ class ApiMoviesManager
                         "url" => "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8Tw5IttoEATGD2FHhcG9bDzqwbi.jpg",],
                 ];
                 break;
-            case "zoombie":
+            case "zombie":
                 return $movies = [
                     ["title" => "Zombie Flesh Eaters",
                         "url" => "https://image.tmdb.org/t/p/w600_and_h900_bestv2/wew8A4gTZEhSRKCBAmziFFK6gGi.jpg",

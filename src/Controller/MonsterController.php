@@ -21,7 +21,7 @@ class MonsterController extends AbstractController
     {
         $moviesApi = new ApiMoviesManager();
         $movies = $moviesApi->getProfil($profil);
-        return $this->twig->render('Monster/fight.html.twig', [
+        return $this->twig->render('Monster/profils.html.twig', [
             "movies" => $movies,
         ]);
     }
