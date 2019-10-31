@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+
+    <h1>Quelle victime es-tu ?</h1>
+    {% for question, values in questions %}
+        <form method="post">
+            <h2>{{ question }}</h2>
+            <div class="row">
+                {%  for value in values %}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="{{ question }}">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <a href=""><img class="imageForm" src="{{ value.Image }}"></a>
+                                <p>{{ value.Text }}</p>
+                            </label>
+                        </div>
+                    {% endfor %}
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    {%  endfor %}
+{% endblock %}
+
