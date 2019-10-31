@@ -51,13 +51,28 @@ a, a:hover {
     flex-direction: column;
 }
 
-.imageForm {
+.checkbox{
+    height: 20px;
+    width: 20px;
+}
+
+.imageForm{
     object-fit: cover;
     object-position: top;
     width : 350px;
     height: 300px;
 }
 
+p{
+    width: 350px;
+}
+
+.descriptionImage {
+    display: flex;
+    width: 350px;
+    text-align: center;
+    margin: auto;
+}
 /* ---------------------------------------------------- */
 
 /* movies */
