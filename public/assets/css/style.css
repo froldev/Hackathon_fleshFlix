@@ -13,4 +13,14 @@
 }
 
 /* -----------------------------------------------------------------*/
+p{
+    width: 350px;
+}
+
+.descriptionImage{
+    display: flex;
+    width: 350px;
+    text-align: center;
+    margin: auto;
+}
 
