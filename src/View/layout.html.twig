@@ -18,7 +18,11 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-<div class="">
+
+<div class="container-fluid">
+    {% include 'Blocks/_header.html.twig' %}
+
+<div class="form">
     {% block content %}{% endblock %}
 </div>
 

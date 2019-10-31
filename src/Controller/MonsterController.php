@@ -12,7 +12,7 @@ class MonsterController extends AbstractController
     {
         $moviesApi = new ApiMoviesManager();
         $movies = $moviesApi->getMovies();
-        return $this->twig->render('monster/movies.html.twig', [
+        return $this->twig->render('Monster/movies.html.twig', [
             "movies" => $movies,
         ]);
     }
@@ -192,10 +192,19 @@ class MonsterController extends AbstractController
             ],
         ];
 
-        return $this->twig->render("monster/index.html.twig", ["questions" => $questionsForm]);
+        return $this->twig->render("Monster/index.html.twig", ["questions" => $questionsForm]);
     }
 
-    public function profils()
+    public function profils(string $profil)
+    {
+        $moviesApi = new ApiMoviesManager();
+        $movies = $moviesApi->getProfil($profil);
+        return $this->twig->render('Monster/profils.html.twig', [
+            "movies" => $movies,
+        ]);
+    }
+
+    public function profiles()
     {
         if ($_SERVER['REQUEST_METHOD']==='POST') {
 
@@ -221,19 +230,22 @@ class MonsterController extends AbstractController
                 }
             }
             if ($slasher >= $zombie and $slasher >= $ghost and $slasher >= $secret){
-                return $this->twig->render('monster/profils/slasher.html.twig');
+                header ('location:/monster/profils/slasher');
             }
             if ($zombie >= $slasher and $zombie >= $ghost and $zombie >= $secret){
-                return $this->twig->render('monster/profils/zombie.html.twig');
+                header ('location:/monster/profils/zombie');
             }
             if ($ghost >= $zombie and $ghost >= $secret and $ghost >= $slasher){
-                return $this->twig->render('monster/profils/ghost.html.twig');
+                header ('location:/monster/profils/ghost');
             }
             if ($secret >= $zombie and $secret >= $ghost and $secret >= $slasher){
-                return $this->twig->render('monster/profils/secret.html.twig');
+                header ('location:/monster/profils/secret');
             }
         }
+    }
 
-        return $this->twig->render('monster/index.html.twig');
+    public function final()
+    {
+        return $this->twig->render('Monster/final.html.twig');
     }
 }
