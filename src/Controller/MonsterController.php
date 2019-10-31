@@ -25,4 +25,9 @@ class MonsterController extends AbstractController
             "movies" => $movies,
         ]);
     }
+
+    public function final()
+    {
+        return $this->twig->render('Monster/final.html.twig');
+    }
 }
