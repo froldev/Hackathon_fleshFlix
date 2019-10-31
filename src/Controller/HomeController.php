@@ -185,7 +185,7 @@ class HomeController extends AbstractController
             ],
             'Sais-tu te battre ?'=> [
                 [
-                    'Image'=>'https://www.telerama.fr/sites/tr_master/files/styles/simplecrop1000/public/medias/2016/10/media_149399/rocky-dans-tous-ses-etats-sur-cine-frisson%2CM387805.jpg?itok=Xlsl8q6L',
+                    'Image'=>'https://i.pinimg.com/originals/f9/2f/ae/f92faef70df491c43f9dbed1aa244c70.jpg',
                     'Text'=> 'Oui',
                     'Lettre'=> 'Ghost'
                 ],
